@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery Practice</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript"src="scripts/mylibrary.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#Hello").fadeOut(1000, function(){
+					$("#Hello").fadeIn(2000, function()
+						{
+							$("#Hello").css({color:"red"})
+
+
+				});
+
+				});
+
+
+				$("#list").slideUp(2000, function(){
+					$("#list").slideDown(1000,function()
+					{
+						$("#list").css({color:"blue"})
+				
+				});
+				});
+
+				$(".cool").hide(1000,function(){
+					$(".cool").show(3000, function()
+					{
+						$(".cool").css({color:"green"})
+				});
+				});
+
+				$("button").click(function(){
+					$("p").clone().appendTo("p");
+					$("p").css({color:"white"});
+				});
+
+				$("h3").click(function(){
+					$("#header").animate({left:"250px"},3000, function(){
+						$("#header").css({color:"orange"})
+					});
+				});
+
+
+				$("body").css({background:"purple"});
+
+				$("a").animate({left:'250px'}, 4000);
+				$("a").css({'font-size':'+80pt'})
+
+					
+				$("#orderedList").css({color: 'yellow'});
+				$("#orderedList").animate({left:'300px'}, 2000, function()
+					{$("#orderedList").css({color:"red"})
+					
+					});
+
+		
+			});
+
+		</script>
+		<style>
+			#Hello{
+				font-size: 40pt;
+				font-weight: bold;
+			}
+
+			p{
+				color:red;
+				font-size: 20pt;
+			}
+			#header{
+				color: blue;
+				background-color: black;
+				font-size: 60pt;
+				position: relative;
+			}
+
+			a{
+				color:white;
+				position :relative;
+			}
+		ol li{
+			font-weight: bold;
+		}
+		</style>
+
+	</head>
+	<body>
+		<div id="Hello">Hello</div>
+		<div id="list">
+			<ul>
+				<li>Yo</li>
+				<li>What's Up</li>
+				<li>I'm</li>
+				<li>Casey</li>
+			</ul>
+		</div>
+		<div class="cool">coolio</div>
+		<div class="cool">coolio</div>
+		<div class="cool">coolio</div>
+		<div class="cool">coolio</div>
+		<p>This is a paragraph.</p>
+		<button>Clone all p elements, and append them to the p element</button>
+		<p>Click the Hello World to activate:</p>
+		<h3 id="header">Hello World</h3>
+		<div id="orderedList">
+			<ol>
+				<li>Hello</li>
+				<li>World</li>
+				<li>What's</li>
+				<li>Up</li>
+			</ol>
+		</div>
+
+		<a href="https://www.google.com">Google</a>
+	</body>
+
+<html>
